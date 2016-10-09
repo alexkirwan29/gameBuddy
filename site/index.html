@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Game Buddy v0.0.1</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="491361019383-ben85ir8vag9oe99oe9bbkctkfth8dlh.apps.googleusercontent.com">
+    <meta name="google-signin-cookiepolicy" content="single_host_origin" />
+    <meta name="google-signin-requestvisibleactions" content="https://schema.org/AddAction" />
+    <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
+    
+    
+    
+    <style>
+    
+        body {
+            
+            background-color: #212326;
+            margin: 0px;
+            
+        }
+        
+        .topBar {
+            
+            height: 50px;
+            width: 100%;
+            background-color: #555A61;
+        }
+        
+        .leftBar {
+            
+            height: 1080px;
+            width: 200px;
+            background-color: #2E3136;
+            float: left;
+            
+        }
+        
+        .socialPane {
+            
+            height: 1080px;
+            width: 1000px;
+            background-color: #36393E;
+            float: right;
+            
+        }
+    
+    </style>
+    
+    <script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+        
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+        
+
+</script>
+    
+</head>
+
+<body>
+<!--<div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
+-->
+    
+    <div class="topBar"></div>
+    
+    <script> function profile.getImageUrl() {
+            
+        }</script>
+    
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+   
+    
+    <div class="leftBar"></div>
+    
+    <div class="socialPane"></div>
+    
+     <a href="#" onclick="signOut();">Sign out</a>
+</body>
+</html>
